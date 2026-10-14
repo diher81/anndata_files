@@ -19,6 +19,7 @@ print("cell metadata - keys:\n", adata.obs.keys())
 
 # Inspect gene metadata
 print("gene metadata:\n", adata.var.head())
+print("gene metadata - keys:\n", adata.var.keys())
 
 # List available analysis results and matrices
 print("Layers:", list(adata.layers.keys()))
@@ -28,3 +29,17 @@ print("Unstructured data:", list(adata.uns.keys()))
 
 # matrix
 print("adata.X:\n", adata.X)
+
+# data
+print("Unstructured data - keys:\n", list(adata.uns.keys()))
+print("Unstructured data - values:\n", list(adata.uns.values()))
+
+# layers
+print("Main matrix:", adata.X.shape)
+for name in adata.layers:
+    layer = adata.layers[name]
+    print(
+        f"Layer: {name}, "
+        f"Type: {type(layer)}, "
+        f"Shape: {layer.shape}"
+    )
