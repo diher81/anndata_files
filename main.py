@@ -14,7 +14,8 @@ print("Cells:", adata.n_obs)
 print("Genes:", adata.n_vars)
 
 # Inspect cell metadata
-print("cell metadata:/n", adata.obs.head())
+print("cell metadata:\n", adata.obs.head())
+print("cell metadata - keys:\n", adata.obs.keys())
 
 # Inspect gene metadata
 print("gene metadata:\n", adata.var.head())
@@ -24,3 +25,6 @@ print("Layers:", list(adata.layers.keys()))
 print("Obsm:", list(adata.obsm.keys()))
 print("Obsp:", list(adata.obsp.keys()))
 print("Unstructured data:", list(adata.uns.keys()))
+
+# matrix
+print("adata.X:\n", adata.X)
